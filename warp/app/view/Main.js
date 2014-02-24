@@ -1,4 +1,4 @@
-Ext.define('Spacer.view.Main', {
+Ext.define('Warp.view.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'main',
     requires: [
@@ -19,10 +19,10 @@ Ext.define('Spacer.view.Main', {
                 items: {
                     docked: 'top',
                     xtype: 'titlebar',
-                    title: 'Spacer'
+                    title: 'Warp'
                 },
 
-                html: "This is Spacer, our first Sencha Space app."
+                html: "Say <b>hello</b> to warp speed!"
             },
             {
                 title: 'Get Started',
