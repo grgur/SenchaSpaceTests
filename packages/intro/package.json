@@ -1,0 +1,12 @@
+{
+    "name": "intro",
+    "type": "code",
+    "creator": "Grgur Grisogono",
+    "summary": "A simple package that shows intro page",
+    "detailedDescription": "Parse title and html to display into page",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "local": true,
+    "requires": []
+}

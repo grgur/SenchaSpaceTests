@@ -16,6 +16,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSet": "../touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLResultSetRowList": "../touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "../touch/src/device/sqlite/Sencha.js",
+  "Pkg": "../packages/intro/src",
   "Spacer": "app"
 });
 Ext.ClassManager.addNameAlternateMappings({
@@ -638,6 +639,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "Pkg.view.Intro": [],
   "Spacer.view.Main": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1357,7 +1359,11 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "Pkg.view.Intro": [
+    "widget.introview"
+  ],
   "Spacer.view.Main": [
     "widget.main"
   ]
 });
+Ext.setVersion("intro", "1.0.0");
