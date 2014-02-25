@@ -40,18 +40,22 @@ Ext.application({
     },
 
     launch: function() {
+        var main = Ext.create('Warp.view.Main'),
+            timeStart;
+
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('Warp.view.Main'));
+        Ext.Viewport.add(main);
 
-        var timeStart = Date.now();
+        timeStart = Date.now();
 
         Ext.onSpaceReady(function(){
-            var time = Date.now() - timeStart;
+            var time = Date.now() - timeStart,
+                result = Ext.util.Format.format('It took {0}ms from launch() to onSpaceReady()', time);
 
-            Ext.Msg.alert('Launch to Space Ready', time);
+            main.setHtml(result);
         });
     },
 
