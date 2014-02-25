@@ -1,5 +1,5 @@
 Ext.define('Warp.controller.Communication', {
-    extend : 'Ext.app.Controller',
+    extend : 'Pkg.app.Controller',
 
     config : {
 
