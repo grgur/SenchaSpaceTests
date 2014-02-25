@@ -18,6 +18,7 @@ Ext.define('Pkg.view.Intro', {
             {
                 title   : title,
                 iconCls : 'home',
+                itemId  : 'welcomehome',
 
                 styleHtmlContent : true,
                 scrollable       : true,
@@ -31,5 +32,13 @@ Ext.define('Pkg.view.Intro', {
                 html : html
             }
         ]);
+    },
+
+    updateHtml: function (html) {
+        var home = this.down('#welcomehome');
+
+        if (home) {
+            home.setHtml(html);
+        }
     }
 });
