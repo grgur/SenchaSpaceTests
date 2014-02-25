@@ -1,0 +1,12 @@
+{
+    "name": "space",
+    "type": "code",
+    "creator": "Grgur Grisogono",
+    "summary": "Merge Sencha Space to Touch",
+    "detailedDescription": "Implement Space specific calls withing Sencha Touch",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "local": true,
+    "requires": []
+}
