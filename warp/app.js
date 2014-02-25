@@ -46,10 +46,10 @@ Ext.application({
         // Initialize the main view
         Ext.Viewport.add(Ext.create('Warp.view.Main'));
 
-        console.time('spaceready');
+        var timeStart = performance.now();
 
         Ext.onSpaceReady(function(){
-            var time = console.timeEnd('spaceready');
+            var time = performance.now() - timeStart;
 
             Ext.Msg.alert('Launch to Space Ready', time);
         });
