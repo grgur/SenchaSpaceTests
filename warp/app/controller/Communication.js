@@ -11,7 +11,8 @@ Ext.define('Warp.controller.Communication', {
             me.sendSpaceMsg({
                 app  : 'spacer',
                 type : 'texting',
-                msg  : text
+                msg  : text,
+                show : true
             });
         });
     }

@@ -75,8 +75,8 @@ Ext.define('Pkg.app.Controller', {
      * @param {Object} cfg.scope Scope to run callbacks in
      */
     sendSpaceMsg : function (cfg) {
-        var success = cfg.success.bind(cfg.scope, cfg),
-            failure = cfg.failure.bind(cfg.scope, cfg),
+        var success = cfg.success ? cfg.success.bind(cfg.scope, cfg) : Ext.emptyFn,
+            failure = cfg.failure ? cfg.failure.bind(cfg.scope, cfg) : Ext.emptyFn,
             send = function (connection) {
                 connection.send(
                     {
@@ -84,10 +84,7 @@ Ext.define('Pkg.app.Controller', {
                         msg  : cfg.msg
                     },
                     cfg.show
-                ).then(
-                        success,
-                        failure
-                    );
+                ).then(success, failure);
             };
 
         Ext.space.Invoke.get(cfg.app).then(send, failure);
