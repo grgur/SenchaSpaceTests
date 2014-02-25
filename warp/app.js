@@ -52,7 +52,6 @@ Ext.application({
             var time = console.timeEnd('spaceready');
 
             Ext.Msg.alert('Launch to Space Ready', time);
-
         });
     },
 
