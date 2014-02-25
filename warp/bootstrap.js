@@ -17,6 +17,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "../touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "../touch/src/device/sqlite/Sencha.js",
   "Pkg": "../packages/intro/src",
+  "Pkg.app": "../packages/space/overrides/app",
   "Warp": "app"
 });
 Ext.ClassManager.addNameAlternateMappings({
@@ -639,6 +640,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "Pkg.app.Controller": [],
   "Pkg.view.Intro": [],
   "Warp.view.Main": []
 });
@@ -1359,6 +1361,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "Pkg.app.Controller": [],
   "Pkg.view.Intro": [
     "widget.introview"
   ],
@@ -1367,3 +1370,5 @@ Ext.ClassManager.addNameAliasMappings({
   ]
 });
 Ext.setVersion("intro", "1.0.0");
+Ext.setVersion("space", "1.0.0");
+Ext.Loader.loadScriptFile("../packages/space/overrides/app/Controller.js", Ext.emptyFn);;
