@@ -13,7 +13,7 @@ Ext.define('Pkg.app.Controller', {
          * @param {Ext.Promise} promise
          * @param {Object} message Message object
          */
-        msgHandlers : {}
+        msgactions : {}
     },
 
     /**
@@ -44,13 +44,13 @@ Ext.define('Pkg.app.Controller', {
      * @private
      * Forward messages to registered handlers
      * @param {Object} message Message object
-     * @param {String} message.action Message action. Should match a handler in msgHandlers
+     * @param {String} message.action Message action. Should match a handler in msgActions
      * @param {Mixed} message.msg Message content
      * @param {Ext.Promise} promise
      */
     spaceHandleMessage : function (message, promise) {
         var action = message.action,
-            handlerName = this.getMsgHandlers()[action],
+            handlerName = this.getMsgactions()[action],
             handler = this[handlerName];
 
         if (!Ext.isFunction(handler)) {
