@@ -54,8 +54,10 @@ Ext.define('Pkg.app.Controller', {
             handler = this[handlerName];
 
         if (!Ext.isFunction(handler)) {
-            alert('not a handler my friend' + action);
-            promise.reject('No handlers associated with action ' + action);
+            console.warn('not a handler my friend', action);
+
+            // fulfilling promise althout i should have rejected. If I reject, Space will keep on shuffling the apps
+            promise.fulfill('No handlers associated with action ' + action);
             return;
         }
 
