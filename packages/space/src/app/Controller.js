@@ -26,10 +26,6 @@ Ext.define('Pkg.app.Controller', {
         me.callParent();
     },
 
-    onSpaceReady : Ext.emptyFn,
-
-    onSpaceError : Ext.emptyFn,
-
     /**
      * @private
      * Listen for Space messages
@@ -37,8 +33,8 @@ Ext.define('Pkg.app.Controller', {
     spaceListenMessages : function () {
         var me = this;
         Ext.space.Invoke.onMessage(function (senderId, message) {
-            alert('message received');
             var promise = new Ext.Promise();
+            console.log(message);
             me.spaceHandleMessage(message, promise);
             return promise;
         });
