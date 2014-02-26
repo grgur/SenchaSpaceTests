@@ -19,7 +19,7 @@ Ext.define('Spacer.controller.Communication', {
         var main = this.getMain();
 
         main.log('Spacer received a message');
-        alert(msg);
-        main.log(msg);
+        alert(JSON.stringify(msg));
+        main.log(JSON.stringify(msg));
     }
 });
