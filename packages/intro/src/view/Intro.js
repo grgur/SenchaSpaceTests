@@ -40,5 +40,19 @@ Ext.define('Pkg.view.Intro', {
         if (home) {
             home.setHtml(html);
         }
+    },
+
+    log: function (text) {
+        var current = this.getHtml();
+
+        text = [
+            current,
+            '<br />',
+            a.toLocaleTimeString(),
+            ': ',
+            text
+        ].join();
+
+        this.setHtml(text);
     }
 });

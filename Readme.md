@@ -3,7 +3,8 @@ Notes
 * In multiple app environment, working with workspaces and packages makes a lot of sense. Sencha Cmd 5 is to provide with workspace watch methods. Hopefully we won't have to build every app in the workspace individually.
 * Creating a deployment script on server side is proven to be very helpful as my Sencha Space native app gets built updates automatically
 * 100 - 400ms is the delay between `launch()` and `onSpaceReady()` (on an iPad mini). Varies.
-
+* Camera can float over the app, but the buttons on it are buggy (ios7)
+* Swipe from top right for a task manager
 
 Questions:
 ============

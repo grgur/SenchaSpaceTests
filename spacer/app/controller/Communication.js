@@ -8,10 +8,15 @@ Ext.define('Spacer.controller.Communication', {
     },
 
     onSpaceReady: function () {
+        var main = this.getMain();
 
+        main.log('Spacer is ready');
     },
 
     onText: function (msg, promise) {
-        Ext.Msg.alert(msg);
+        var main = this.getMain();
+
+        main.log('Spacer received a message');
+        main.log(msg);
     }
 });
