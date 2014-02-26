@@ -13,7 +13,7 @@ Ext.define('Warp.controller.Communication', {
         main.log('Warp init controller comm');
 
         Ext.onSpaceReady(function () {
-            alert('space ready');
+            alert('space ready then');
             main.log('Space is ready');
         });
     },

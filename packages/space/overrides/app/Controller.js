@@ -6,7 +6,7 @@ Ext.define('Pkg.override.app.Controller', {
      */
     constructor : function () {
         var me = this;
-        Ext.onSpaceReady(me, me.initSpace, me.onSpaceError);
+        Ext.onSpaceReady(me.initSpace, me);
         me.callOverridden(arguments);
 
     },
@@ -21,7 +21,5 @@ Ext.define('Pkg.override.app.Controller', {
         me.onSpaceReady.apply(me, arguments);
     },
 
-    onSpaceReady : Ext.emptyFn,
-
-    onSpaceError : Ext.emptyFn
+    onSpaceReady : Ext.emptyFn
 });
