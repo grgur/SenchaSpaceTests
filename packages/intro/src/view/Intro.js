@@ -42,9 +42,10 @@ Ext.define('Pkg.view.Intro', {
         }
     },
 
-    log: function (text) {
+    log: function () {
         var current = this.getHtml(),
-            date = new Date();
+            date = new Date(),
+            text = Array.prototype.slice.call(arguments).join(' ');
 
         text = [
             current,
