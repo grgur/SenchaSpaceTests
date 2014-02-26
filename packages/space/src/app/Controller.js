@@ -13,7 +13,7 @@ Ext.define('Pkg.app.Controller', {
          * @param {Ext.Promise} promise
          * @param {Object} message Message object
          */
-        msgactions : {}
+        msgActions : {}
     },
 
     /**
@@ -50,7 +50,7 @@ Ext.define('Pkg.app.Controller', {
      */
     spaceHandleMessage : function (message, promise) {
         var action = message.action,
-            handlerName = this.getMsgactions()[action],
+            handlerName = this.getMsgActions()[action],
             handler = this[handlerName];
 
         if (!Ext.isFunction(handler)) {

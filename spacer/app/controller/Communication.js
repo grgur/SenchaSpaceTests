@@ -2,13 +2,19 @@ Ext.define('Spacer.controller.Communication', {
     extend: 'Pkg.app.Controller',
 
     config: {
-        msgactions: {
+        msgActions: {
             'text' : 'onText'
         },
 
         refs : {
             'main' : 'main'
         }
+    },
+
+    init: function () {
+        this.setMsgActions({
+            'text' : 'onText'
+        });
     },
 
     onSpaceReady: function () {
@@ -23,7 +29,7 @@ Ext.define('Spacer.controller.Communication', {
         main.log(JSON.stringify(msg));
     },
 
-    updateMsgactions: function (h) {
+    updateMsgActions: function (h) {
         console.log('msgHandlers updated', h);
     }
 });
