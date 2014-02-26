@@ -4,6 +4,10 @@ Ext.define('Spacer.controller.Communication', {
     config: {
         msgHandlers: {
             'text' : 'onText'
+        },
+
+        refs : {
+            'main' : 'main'
         }
     },
 

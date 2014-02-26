@@ -43,12 +43,13 @@ Ext.define('Pkg.view.Intro', {
     },
 
     log: function (text) {
-        var current = this.getHtml();
+        var current = this.getHtml(),
+            date = new Date();
 
         text = [
             current,
             '<br />',
-            a.toLocaleTimeString(),
+            date.toLocaleTimeString(),
             ': ',
             text
         ].join();

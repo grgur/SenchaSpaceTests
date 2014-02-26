@@ -5,6 +5,7 @@ Notes
 * 100 - 400ms is the delay between `launch()` and `onSpaceReady()` (on an iPad mini). Varies.
 * Camera can float over the app, but the buttons on it are buggy (ios7)
 * Swipe from top right for a task manager
+* Internally, an app talks to space by sending HTTP GET requests. E.g. `Ext.space.Camera.capture({scope: callbackScope,quality: 75,width: 500,height: 500})` becomes: `?quality=75&width=500&height=500&command=Camera%23capture`
 
 Questions:
 ============
