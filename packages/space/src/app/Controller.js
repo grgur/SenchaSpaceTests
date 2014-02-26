@@ -55,10 +55,11 @@ Ext.define('Pkg.app.Controller', {
 
         if (!Ext.isFunction(handler)) {
             alert('not a handler my friend' + action);
+            promise.reject('No handlers associated with action ' + action);
             return;
         }
 
-        handler(message.msg, promise, message);
+        promise.fulfill(handler(message.msg, promise, message));
     },
 
 
