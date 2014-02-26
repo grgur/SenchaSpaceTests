@@ -52,7 +52,7 @@ Ext.define('Pkg.view.Intro', {
             date.toLocaleTimeString(),
             ': ',
             text
-        ].join();
+        ].join('');
 
         this.setHtml(text);
     }

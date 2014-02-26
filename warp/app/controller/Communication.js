@@ -24,10 +24,12 @@ Ext.define('Warp.controller.Communication', {
 
         main.log('Space is ready with the built in Controller.prototype.onSpaceReady method');
         Ext.Msg.prompt('Message', 'Send something to Spacer', function (button, text) {
-            main.log('pressed ',button);
+            main.log('pressed ', button);
             main.log('text ', text);
 
-            if (button === 'yes') {
+            console.log('[button pressed]', button);
+
+            if (button === 'ok') {
                 me.sendSpaceMsg({
                     app     : 'spacer',
                     type    : 'texting',
