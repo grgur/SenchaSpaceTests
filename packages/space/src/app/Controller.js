@@ -53,6 +53,7 @@ Ext.define('Pkg.app.Controller', {
             handler = this[this.getMsgHandlers()[action]];
 
         if (!Ext.isFunction(handler)) {
+            alert('not a handler my friend' + action);
             return;
         }
 
