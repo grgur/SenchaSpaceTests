@@ -21,5 +21,9 @@ Ext.define('Spacer.controller.Communication', {
         main.log('Spacer received a message');
         alert(JSON.stringify(msg));
         main.log(JSON.stringify(msg));
+    },
+
+    updateMsgHandlers: function (h) {
+        alert(JSON.stringify(h));
     }
 });

@@ -50,7 +50,8 @@ Ext.define('Pkg.app.Controller', {
      */
     spaceHandleMessage : function (message, promise) {
         var action = message.action,
-            handler = this[this.getMsgHandlers()[action]];
+            handlerName = this.getMsgHandlers()[action],
+            handler = this[handlerName];
 
         if (!Ext.isFunction(handler)) {
             alert('not a handler my friend' + action);
