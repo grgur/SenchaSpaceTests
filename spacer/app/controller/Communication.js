@@ -3,7 +3,7 @@ Ext.define('Spacer.controller.Communication', {
 
     config: {
         msgActions: {
-            'text' : 'onText'
+            'texting' : 'onText'
         },
 
         refs : {
@@ -13,7 +13,7 @@ Ext.define('Spacer.controller.Communication', {
 
     init: function () {
         this.setMsgActions({
-            'text' : 'onText'
+            'texting' : 'onText'
         });
     },
 
