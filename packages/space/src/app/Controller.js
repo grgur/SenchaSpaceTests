@@ -32,8 +32,10 @@ Ext.define('Pkg.app.Controller', {
      */
     spaceListenMessages : function () {
         var me = this;
+        var main = this.getMain();
+
         Ext.space.Invoke.onMessage(function (senderId, message) {
-            alert('got message' + message.msg + msg);
+            main.log('got message', message.msg , msg);
             var promise = new Ext.Promise();
             me.spaceHandleMessage(message, promise);
             return promise;
@@ -49,18 +51,19 @@ Ext.define('Pkg.app.Controller', {
      * @param {Ext.Promise} promise
      */
     spaceHandleMessage : function (message, promise) {
-        alert('handling message' + message.msg + msg);
+        var main = this.getMain();
+        main.log('handling message' , message.msg , msg);
         var action = message.action,
             handler = this[this.getMsgHandlers()[action]];
 
-        alert('handling message vars '+action + handler);
+        main.log('handling message vars ',action , handler);
 
         if (!Ext.isFunction(handler)) {
-            alert('handler is not a function ' + handler)
+            main.log('handler is not a function ' , handler)
             return;
         }
 
-        alert('calling handler ' + message.msg)
+        main.log('calling handler ' , message.msg)
         handler(message.msg, promise, message);
     },
 
