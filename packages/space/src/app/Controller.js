@@ -33,8 +33,8 @@ Ext.define('Pkg.app.Controller', {
     spaceListenMessages : function () {
         var me = this;
         Ext.space.Invoke.onMessage(function (senderId, message) {
+            console.log('msg', message);
             var promise = new Ext.Promise();
-            console.log(message);
             me.spaceHandleMessage(message, promise);
             return promise;
         });
