@@ -7,17 +7,6 @@ Ext.define('Warp.controller.Communication', {
         }
     },
 
-    launch : function () {
-        var main = this.getMain();
-
-        main.log('Warp init controller comm');
-
-        Ext.onSpaceReady(function () {
-            alert('space ready then');
-            main.log('Space is ready');
-        });
-    },
-
     onSpaceReady : function () {
         var me = this,
             main = me.getMain();
