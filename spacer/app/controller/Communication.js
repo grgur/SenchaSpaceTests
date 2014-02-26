@@ -12,6 +12,7 @@ Ext.define('Spacer.controller.Communication', {
     },
 
     onSpaceReady: function () {
+        console.log('space ready!!');
         var main = this.getMain();
 
         main.log('Spacer is ready');
