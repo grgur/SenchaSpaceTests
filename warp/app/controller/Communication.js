@@ -8,6 +8,7 @@ Ext.define('Warp.controller.Communication', {
     },
 
     launch : function () {
+        alert('launched warp')
         var main = this.getMain();
 
         main.log('Warp init controller comm');
