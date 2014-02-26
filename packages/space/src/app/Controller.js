@@ -53,6 +53,8 @@ Ext.define('Pkg.app.Controller', {
             handlerName = this.getMsgActions()[action],
             handler = this[handlerName];
 
+        console.log('spaceHandleMessage', arguments, action, handlerName);
+
         if (!Ext.isFunction(handler)) {
             console.warn('not a handler my friend', action);
 
