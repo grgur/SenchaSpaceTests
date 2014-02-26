@@ -1,5 +1,5 @@
 Ext.define('Pkg.override.app.Controller', {
-        override : 'Ext.app.Controller',
+    override : 'Ext.app.Controller',
 
     /**
      * Incorporate onSpaceReady in all controllers and Application
