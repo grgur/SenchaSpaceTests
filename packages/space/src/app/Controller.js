@@ -82,8 +82,8 @@ Ext.define('Pkg.app.Controller', {
             send = function (connection) {
                 connection.send(
                     {
-                        type : cfg.type,
-                        msg  : cfg.msg
+                        action : cfg.action,
+                        msg    : cfg.msg
                     },
                     cfg.show
                 ).then(success, failure);
