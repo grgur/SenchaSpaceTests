@@ -4,11 +4,15 @@ Ext.define('Pkg.override.app.Controller', {
     /**
      * Incorporate onSpaceReady in all controllers and Application
      */
-    constructor : function () {
+    //    constructor : function () {
+    //
+    //        me.callOverridden(arguments);
+    //
+    //    },
+
+    init : function () {
         var me = this;
         Ext.onSpaceReady(me.initSpace, me);
-        me.callOverridden(arguments);
-
     },
 
     /**

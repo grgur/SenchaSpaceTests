@@ -21,7 +21,7 @@ Ext.define('Warp.controller.Communication', {
             if (button === 'ok') {
                 me.sendSpaceMsg({
                     app     : 'spacer',
-                    type    : 'texting',
+                    action  : 'texting',
                     msg     : text,
                     show    : true,
                     success : function (m) {
