@@ -57,7 +57,7 @@ Ext.application({
 
         Ext.onSpaceReady(function () {
             var time = Date.now() - timeStart,
-                result = Ext.util.Format.format('It took {0}ms from launch() to onSpaceReady()', time);
+                result = Ext.util.Format.format('It took {0}ms from launch() to onSpaceReady().', time);
 
             main.setHtml(result);
         });
